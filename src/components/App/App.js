@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+
+// import axios from 'axios';
+
 import './App.css';
+import FeelingsPage from '../Pages/FeelingsPage/FeelingsPage';
 
 class App extends Component {
   render() {
@@ -8,9 +12,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
+          <h4>
+            <i>Don't forget it!</i>
+          </h4>
         </header>
-        <br/>
+        <br />
+        <Router>
+          <Route exact path="/" component={FeelingsPage} />
+        </Router>
       </div>
     );
   }
