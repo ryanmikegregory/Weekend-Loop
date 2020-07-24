@@ -1,8 +1,4 @@
-# Project Name
-
-Redux Feedback loop
-
-# PROJECT NAME
+# REDUX FEEDBACK LOOP
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
