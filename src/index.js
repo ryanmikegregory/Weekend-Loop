@@ -9,8 +9,9 @@ import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
-//TODO create storeInstance, reducers, and wrap APP
+//TODO create storeInstance, wire up reducers, and wrap APP
 const feelingsReducer = (state = '', action) => {
+  console.log(state);
   if (action.type === 'SET_FEELINGS_RATING') {
     return action.payload;
   }
@@ -20,7 +21,6 @@ const feelingsReducer = (state = '', action) => {
 const understandingReducer = (state = '', action) => {
   console.log('understanding reducer');
   if (action.type === 'SET_UNDERSTANDING_RATING') {
-    console.log(action.payload);
     return action.payload;
   }
 

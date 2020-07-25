@@ -7,10 +7,15 @@ class FeelingsPage extends Component {
     feelings: '',
   };
 
+  onClickHome = (event) => {
+    this.props.history.push('/');
+  };
+
   onInputChange = (input) => (event) => {
     this.setState({
       [input]: event.target.value,
     });
+    console.log(this.state);
   };
 
   onFeelingsNextClick = (type) => {
@@ -20,6 +25,7 @@ class FeelingsPage extends Component {
   render() {
     return (
       <div>
+        <button onClick={this.onClickHome}>Home</button>
         <h2>How are you feeling today?</h2>
         <input
           type="number"
