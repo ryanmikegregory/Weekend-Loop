@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route} from 'react-router-dom';
 
 // import axios from 'axios';
 
 import './App.css';
-import LandingPage from '../Pages/LandingPage/LandingPage';
 import FeelingsPage from '../Pages/FeelingsPage/FeelingsPage';
 import UnderstandPage from '../Pages/UnderstandPage/UnderstandPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
@@ -23,8 +22,7 @@ class App extends Component {
         </header>
         <br />
         <Router>
-          <Route exact path="/" component={LandingPage} />
-          <Route exact path="/feeling" component={FeelingsPage} />
+          <Route exact path="/" component={FeelingsPage} />
           <Route exact path="/understanding" component={UnderstandPage} />
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentPage} />

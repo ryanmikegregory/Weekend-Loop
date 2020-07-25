@@ -18,7 +18,6 @@ class CommentPage extends Component {
       type: 'SET_COMMENT_VALUE',
       payload: this.state,
     });
-    console.log(this.state);
     this.props.history.push('/review');
   };
 

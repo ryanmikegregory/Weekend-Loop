@@ -18,7 +18,6 @@ class UnderstandPage extends Component {
       type: 'SET_UNDERSTANDING_RATING',
       payload: this.state,
     });
-    console.log(this.state);
     this.props.history.push('/support');
   };
 

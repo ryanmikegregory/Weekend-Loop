@@ -18,7 +18,6 @@ class SupportPage extends Component {
       type: 'SET_SUPPORT_RATING',
       payload: this.state,
     });
-    console.log(this.state);
     this.props.history.push('/comments');
   };
 

@@ -4,14 +4,14 @@ import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
 import App from './components/App/App';
-import logger from 'redux-logger';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
+import logger from 'redux-logger';
+
 //TODO create storeInstance, wire up reducers, and wrap APP
 const feelingsReducer = (state = '', action) => {
-  console.log(state);
   if (action.type === 'SET_FEELINGS_RATING') {
     return action.payload;
   }
@@ -19,28 +19,21 @@ const feelingsReducer = (state = '', action) => {
 };
 
 const understandingReducer = (state = '', action) => {
-  console.log('understanding reducer');
   if (action.type === 'SET_UNDERSTANDING_RATING') {
     return action.payload;
   }
-
   return state;
 };
 
 const supportReducer = (state = '', action) => {
-  console.log('support reducer');
   if (action.type === 'SET_SUPPORT_RATING') {
-    console.log(action.payload);
     return action.payload;
   }
-
   return state;
 };
 
 const commentReducer = (state = '', action) => {
-  console.log('comment reducer');
   if (action.type === 'SET_COMMENT_VALUE') {
-    console.log(action.payload);
     return action.payload;
   }
 
