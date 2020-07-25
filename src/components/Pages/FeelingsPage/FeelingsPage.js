@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 //TODO FORM and NEXT BTN and dispatch
 class FeelingsPage extends Component {
@@ -14,6 +15,8 @@ class FeelingsPage extends Component {
 
   onFeelingsNextClick = (type) => {
     this.props.dispatch({ type: 'SET_FEELINGS_RATING', payload: this.state });
+    console.log(this.state);
+    this.props.history.push('/understanding');
   };
   render() {
     return (
@@ -31,4 +34,4 @@ class FeelingsPage extends Component {
   }
 }
 
-export default FeelingsPage;
+export default connect()(FeelingsPage);
