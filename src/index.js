@@ -21,20 +21,41 @@ const feelingsReducer = (state = '', action) => {
 };
 
 const understandingReducer = (state = '', action) => {
-    console.log('understanding reducer');
-    if (action.type === 'SET_UNDERSTANDING_RATING') {
-      console.log(action.payload);
-      return action.payload;
-    }
-  
-    return state;
-  };
-  
+  console.log('understanding reducer');
+  if (action.type === 'SET_UNDERSTANDING_RATING') {
+    console.log(action.payload);
+    return action.payload;
+  }
+
+  return state;
+};
+
+const supportReducer = (state = '', action) => {
+  console.log('support reducer');
+  if (action.type === 'SET_SUPPORT_RATING') {
+    console.log(action.payload);
+    return action.payload;
+  }
+
+  return state;
+};
+
+const commentReducer = (state = '', action) => {
+  console.log('comment reducer');
+  if (action.type === 'SET_COMMENT_VALUE') {
+    console.log(action.payload);
+    return action.payload;
+  }
+
+  return state;
+};
 
 const storeInstance = createStore(
   combineReducers({
     feelingsReducer,
     understandingReducer,
+    supportReducer,
+    commentReducer,
   }),
   applyMiddleware(logger)
 );

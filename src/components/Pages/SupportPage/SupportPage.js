@@ -19,7 +19,7 @@ class SupportPage extends Component {
       payload: this.state,
     });
     console.log(this.state);
-    // this.props.history.push('/comments');
+    this.props.history.push('/comments');
   };
 
   render() {
