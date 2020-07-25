@@ -15,7 +15,6 @@ class FeelingsPage extends Component {
 
   onFeelingsNextClick = (type) => {
     this.props.dispatch({ type: 'SET_FEELINGS_RATING', payload: this.state });
-    console.log(this.state);
     this.props.history.push('/understanding');
   };
   render() {
