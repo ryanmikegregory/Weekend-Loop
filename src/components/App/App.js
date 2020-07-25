@@ -9,6 +9,7 @@ import FeelingsPage from '../Pages/FeelingsPage/FeelingsPage';
 import UnderstandPage from '../Pages/UnderstandPage/UnderstandPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentPage from '../Pages/CommentPage/CommentPage';
+import ReviewPage from '../Pages/ReviewPage/ReviewPage';
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
           <Route exact path="/understanding" component={UnderstandPage} />
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentPage} />
+          <Route exact path="/review" component={ReviewPage} />
         </Router>
       </div>
     );

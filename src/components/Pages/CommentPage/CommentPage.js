@@ -19,7 +19,7 @@ class CommentPage extends Component {
       payload: this.state,
     });
     console.log(this.state);
-    // this.props.history.push('/review');
+    this.props.history.push('/review');
   };
 
   render() {
