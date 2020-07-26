@@ -5,15 +5,16 @@ import { connect } from 'react-redux';
 class FeelingsPage extends Component {
   state = {
     feelings: '',
-    understanding: '',
-    support: '',
-    comments: '',
   };
-
   onInputChange = (input) => (event) => {
-    this.setState({
-      [input]: event.target.value,
-    });
+    this.setState(
+      {
+        [input]: event.target.value,
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
   };
 
   onFeelingsNextClick = (type) => {
@@ -36,6 +37,4 @@ class FeelingsPage extends Component {
   }
 }
 
-const mapToStoreProps = (store) => ({ store });
-
-export default connect(mapToStoreProps)(FeelingsPage);
+export default connect()(FeelingsPage);

@@ -6,11 +6,15 @@ class UnderstandPage extends Component {
   state = {
     understanding: '',
   };
-
   onInputChange = (input) => (event) => {
-    this.setState({
-      [input]: event.target.value,
-    });
+    this.setState(
+      {
+        [input]: event.target.value,
+      },
+      () => {
+        console.log(this.state);
+      }
+    );
   };
 
   onUnderstandingNextClick = (type) => {
@@ -37,8 +41,6 @@ class UnderstandPage extends Component {
   }
 }
 
-
 const mapToStoreProps = (store) => ({ store });
 
 export default connect(mapToStoreProps)(UnderstandPage);
-
