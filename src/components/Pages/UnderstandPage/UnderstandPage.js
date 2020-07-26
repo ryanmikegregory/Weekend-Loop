@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 
 //TODO FORM and NEXT BTN and dispatch
 class UnderstandPage extends Component {
-  state = {
-    understanding: '',
-  };
+  
   onInputChange = (input) => (event) => {
     this.setState(
       {
@@ -41,6 +39,4 @@ class UnderstandPage extends Component {
   }
 }
 
-const mapToStoreProps = (store) => ({ store });
-
-export default connect(mapToStoreProps)(UnderstandPage);
+export default connect()(UnderstandPage);

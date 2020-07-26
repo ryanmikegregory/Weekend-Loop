@@ -5,7 +5,12 @@ import { connect } from 'react-redux';
 class FeelingsPage extends Component {
   state = {
     feelings: '',
+    understanding: '',
+    support: '',
+    comments: '',
   };
+
+  
   onInputChange = (input) => (event) => {
     this.setState(
       {

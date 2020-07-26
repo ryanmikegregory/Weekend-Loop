@@ -3,10 +3,7 @@ import { connect } from 'react-redux';
 
 //TODO FORM and NEXT BTN and dispatch
 class SupportPage extends Component {
-  state = {
-    support: '',
-  };
-
+ 
   onInputChange = (input) => (event) => {
     this.setState({
       [input]: event.target.value,
@@ -37,6 +34,4 @@ class SupportPage extends Component {
   }
 }
 
-const mapToStoreProps = (store) => ({ store });
-
-export default connect(mapToStoreProps)(SupportPage);
+export default connect()(SupportPage);

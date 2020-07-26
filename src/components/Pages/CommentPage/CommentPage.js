@@ -3,10 +3,7 @@ import { connect } from 'react-redux';
 
 //TODO FORM and NEXT BTN and dispatch
 class CommentPage extends Component {
-  state = {
-    comments: '',
-  };
-
+  
   onInputChange = (input) => (event) => {
     this.setState({
       [input]: event.target.value,
