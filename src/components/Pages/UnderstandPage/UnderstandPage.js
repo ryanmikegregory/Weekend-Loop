@@ -37,4 +37,8 @@ class UnderstandPage extends Component {
   }
 }
 
-export default connect()(UnderstandPage);
+
+const mapToStoreProps = (store) => ({ store });
+
+export default connect(mapToStoreProps)(UnderstandPage);
+

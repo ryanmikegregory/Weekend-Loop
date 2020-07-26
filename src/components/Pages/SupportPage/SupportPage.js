@@ -37,4 +37,6 @@ class SupportPage extends Component {
   }
 }
 
-export default connect()(SupportPage);
+const mapToStoreProps = (store) => ({ store });
+
+export default connect(mapToStoreProps)(SupportPage);

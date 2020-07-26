@@ -37,4 +37,6 @@ class CommentPage extends Component {
   }
 }
 
-export default connect()(CommentPage);
+const mapToStoreProps = (store) => ({ store });
+
+export default connect(mapToStoreProps)(CommentPage);

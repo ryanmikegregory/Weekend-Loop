@@ -11,41 +11,50 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 //TODO create storeInstance, wire up reducers, and wrap APP
-const feelingsReducer = (state = '', action) => {
+
+const feelingsReducer = (state = [], action) => {
   if (action.type === 'SET_FEELINGS_RATING') {
     return action.payload;
   }
   return state;
 };
 
-const understandingReducer = (state = '', action) => {
-  if (action.type === 'SET_UNDERSTANDING_RATING') {
-    return action.payload;
-  }
-  return state;
-};
+// const understandingReducer = (state = {}, action) => {
+//   if (action.type === 'SET_UNDERSTANDING_RATING') {
+//     return action.payload;
+//   }
+//   return state;
+// };
 
-const supportReducer = (state = '', action) => {
-  if (action.type === 'SET_SUPPORT_RATING') {
-    return action.payload;
-  }
-  return state;
-};
+// const supportReducer = (state = {}, action) => {
+//   if (action.type === 'SET_SUPPORT_RATING') {
+//     return action.payload;
+//   }
+//   return state;
+// };
 
-const commentReducer = (state = '', action) => {
-  if (action.type === 'SET_COMMENT_VALUE') {
-    return action.payload;
-  }
+// const commentReducer = (state = {}, action) => {
+//   if (action.type === 'SET_COMMENT_VALUE') {
+//     return action.payload;
+//   }
 
-  return state;
-};
+//   return state;
+// };
+
+// const reviewReducer = (state = [], action) => {
+//   if (action.type === 'SET_FEELINGS_ARRAY') {
+//     return action.payload;
+//   }
+//   return state;
+// };
 
 const storeInstance = createStore(
   combineReducers({
     feelingsReducer,
-    understandingReducer,
-    supportReducer,
-    commentReducer,
+    // understandingReducer,
+    // supportReducer,
+    // commentReducer,
+    // reviewReducer,
   }),
   applyMiddleware(logger)
 );
