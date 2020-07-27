@@ -3,12 +3,9 @@ import { connect } from 'react-redux';
 
 //TODO dispatch and each state import and Submit btn & map
 class ReviewPage extends Component {
-
-
-  onReviewClickSubmit = () => {
+  onReviewPageClickSubmit = () => {
     this.props.history.push('/thank-you');
   };
-
 
   render() {
     return (
@@ -17,7 +14,7 @@ class ReviewPage extends Component {
         <br />
         <p>Test</p>
         <p> </p>
-        <button onClick={this.onReviewClickSubmit}>SUBMIT</button>
+        <button onClick={this.onReviewPageClickSubmit}>SUBMIT</button>
       </div>
     );
   }
