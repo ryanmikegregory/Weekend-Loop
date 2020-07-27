@@ -3,14 +3,6 @@ import { connect } from 'react-redux';
 
 //TODO FORM and NEXT BTN and dispatch
 class FeelingsPage extends Component {
-  state = {
-    feelings: '',
-    understanding: '',
-    support: '',
-    comments: '',
-  };
-
-  
   onInputChange = (input) => (event) => {
     this.setState(
       {

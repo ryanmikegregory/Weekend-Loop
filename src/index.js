@@ -14,49 +14,38 @@ import logger from 'redux-logger';
 
 //CREATE REDUX
 
-const feelingsReducer = (state = [], action) => {
+const feedbackReducer = (state = {}, action) => {
   if (action.type === 'SET_FEELINGS_RATING') {
-    return action.payload;
+    return {
+      ...state,
+      feelings: action.payload,
+    };
+  } else if (action.type === 'SET_UNDERSTANDING_RATING') {
+    return {
+      ...state,
+      understanding: action.payload,
+    };
+  } else if (action.type === 'SET_SUPPORT_RATING') {
+    return {
+      ...state,
+      support: action.payload,
+    };
+  }
+  else if (action.type === 'SET_COMMENT_VALUE') {
+    return {
+      ...state,
+      comments: action.payload,
+    };
   }
   return state;
 };
 
-const understandingReducer = (state = [], action) => {
-  if (action.type === 'SET_UNDERSTANDING_RATING') {
-    return action.payload;
-  }
-  return state;
-};
 
-const supportReducer = (state = {}, action) => {
-  if (action.type === 'SET_SUPPORT_RATING') {
-    return action.payload;
-  }
-  return state;
-};
-
-const commentReducer = (state = {}, action) => {
-  if (action.type === 'SET_COMMENT_VALUE') {
-    return action.payload;
-  }
-
-  return state;
-};
-
-// const reviewReducer = (state = [], action) => {
-//   if (action.type === 'SET_FEELINGS_ARRAY') {
-//     return action.payload;
-//   }
-//   return state;
-// };
 
 const storeInstance = createStore(
   combineReducers({
-    feelingsReducer,
-    understandingReducer,
-    supportReducer,
-    commentReducer,
-    // reviewReducer,
+    feedbackReducer,
+    
   }),
   applyMiddleware(logger)
 );
