@@ -12,6 +12,8 @@ import logger from 'redux-logger';
 
 //TODO create storeInstance, wire up reducers, and wrap APP
 
+//CREATE REDUX
+
 const feelingsReducer = (state = [], action) => {
   if (action.type === 'SET_FEELINGS_RATING') {
     return action.payload;
@@ -21,21 +23,21 @@ const feelingsReducer = (state = [], action) => {
 
 const understandingReducer = (state = [], action) => {
   if (action.type === 'SET_UNDERSTANDING_RATING') {
-    return [...action.payload];
+    return action.payload;
   }
   return state;
 };
 
 const supportReducer = (state = {}, action) => {
   if (action.type === 'SET_SUPPORT_RATING') {
-    return { ...action.payload };
+    return action.payload;
   }
   return state;
 };
 
 const commentReducer = (state = {}, action) => {
   if (action.type === 'SET_COMMENT_VALUE') {
-    return { ...action.payload };
+    return action.payload;
   }
 
   return state;

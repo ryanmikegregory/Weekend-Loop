@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route} from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 
 // import axios from 'axios';
+
+// TODO SETUP ROUTER FOR 6 PAGES
 
 import './App.css';
 import FeelingsPage from '../Pages/FeelingsPage/FeelingsPage';
@@ -9,6 +11,7 @@ import UnderstandPage from '../Pages/UnderstandPage/UnderstandPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentPage from '../Pages/CommentPage/CommentPage';
 import ReviewPage from '../Pages/ReviewPage/ReviewPage';
+import ThankYouPage from '../Pages/ThankYouPage/ThankYouPage';
 
 class App extends Component {
   render() {
@@ -27,6 +30,7 @@ class App extends Component {
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentPage} />
           <Route exact path="/review" component={ReviewPage} />
+          <Route exact path="/thank-you" component={ThankYouPage} />
         </Router>
       </div>
     );
